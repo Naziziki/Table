@@ -1,0 +1,45 @@
+.upTrend,
+.downTrend {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 2px;
+  border-radius: 4px;
+  line-height: 18px;
+}
+
+.upTrend {
+  background-color: #04200e;
+  color: #2eae5c;
+}
+
+.downTrend {
+  background-color: #31191b;
+  color: #e8525f;
+}
+
+.ag-header-cell-label {
+  font-size: 12px;
+  color: #a3a3a3;
+  font-family: Inter;
+}
+
+/* задолбало уже  */
+.ag-row:nth-child(odd) {
+  background-color: #171717; /* Цвет для нечетных строк */
+}
+
+.ag-theme-custom {
+  --ag-background-color: #0a0a0a;
+  --ag-header-background-color: #0a0a0a;
+  --ag-row-border-color: #262626;
+  --ag-row-hover-color: none;
+}
+
+.ag-grid-custom {
+  overflow: "hidden";
+  height: "532px";
+  border: "solid 1px #262626";
+  border-radius: "16px";
+}
