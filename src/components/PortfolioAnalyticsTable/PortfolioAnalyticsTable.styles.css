@@ -25,7 +25,6 @@
   font-family: Inter;
 }
 
-/* задолбало уже  */
 .ag-row:nth-child(odd) {
   background-color: #171717; /* Цвет для нечетных строк */
 }
