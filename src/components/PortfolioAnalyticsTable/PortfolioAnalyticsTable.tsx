@@ -48,7 +48,7 @@ export default function AGGrid() {
     );
   };
 
-  const [rowData, setRowData] = useState([
+  const [rowData] = useState([
     {
       company: "MSFT",
       posEntry: "09/23/24",
@@ -97,7 +97,7 @@ export default function AGGrid() {
   ]);
 
   // Column Definitions: Defines the columns to be displayed.
-  const [colDefs, setColDefs] = useState<ColDef[]>([
+  const [colDefs] = useState<ColDef[]>([
     { field: "company", headerName: "COMPANY", width: 275 },
     { field: "posEntry", headerName: "POSITION ENTRY", width: 120 },
     { field: "rating", headerName: "RATING", width: 120 },
