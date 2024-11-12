@@ -1,0 +1,13 @@
+.portfolioAnalyticsTable__container {
+  overflow: hidden;
+  height: 532px;
+  border: solid 1px #262626;
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.portfolioAnalyticsTable__header {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}

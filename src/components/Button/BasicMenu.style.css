@@ -1,0 +1,18 @@
+.css-1toxriw-MuiList-root-MuiMenu-list {
+  background-color: #171717;
+  font-family: Inter;
+  font-size: 14px;
+  color: white;
+  border: 1px solid #171717;
+  /* border-radius: 8px; */
+  /* overflow: hidden; */
+}
+.css-1toxriw-MuiList-root-MuiMenu-list li {
+  font-family: Inter;
+  font-size: 14px;
+}
+
+.Button_outlined {
+  border: solid 1px #404040 !important;
+  border-radius: 8px !important;
+}

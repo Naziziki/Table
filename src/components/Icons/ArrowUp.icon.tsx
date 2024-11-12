@@ -1,6 +1,6 @@
-export default function ArrowUp() {
+export default function ArrowUpIcon() {
   return (
-    <span>
+    <>
       <svg
         width="16"
         height="17"
@@ -13,6 +13,6 @@ export default function ArrowUp() {
           fill="#40B46A"
         />
       </svg>
-    </span>
+    </>
   );
 }

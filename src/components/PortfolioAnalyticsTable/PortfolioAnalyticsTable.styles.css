@@ -26,19 +26,12 @@
 }
 
 .ag-row:nth-child(odd) {
-  background-color: #171717; /* Цвет для нечетных строк */
+  background-color: #171717;
 }
 
 .ag-theme-custom {
   --ag-background-color: #0a0a0a;
   --ag-header-background-color: #0a0a0a;
-  --ag-row-border-color: #262626;
+  --ag-border-color: none;
   --ag-row-hover-color: none;
-}
-
-.ag-grid-custom {
-  overflow: "hidden";
-  height: "532px";
-  border: "solid 1px #262626";
-  border-radius: "16px";
 }

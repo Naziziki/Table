@@ -1,4 +1,4 @@
-import TablePage from "./pages/TablePage";
+import TablePage from "./Pages/TablePage";
 import "./App.style.css";
 import "./variables.css";
 
