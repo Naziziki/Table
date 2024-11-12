@@ -4,7 +4,12 @@ import "./PortfolioAnalyticsTable.styles.css";
 
 import { AgGridReact, CustomCellRendererProps } from "ag-grid-react";
 import { useMemo, useState } from "react";
-import { ColDef } from "ag-grid-community";
+import {
+  ColDef,
+  SizeColumnsToContentStrategy,
+  SizeColumnsToFitGridStrategy,
+  SizeColumnsToFitProvidedWidthStrategy,
+} from "ag-grid-community";
 
 import ArrowUpIcon from "../Icons/ArrowUp.icon";
 import ArrowDownIcon from "../Icons/ArrowDown.icon";
@@ -14,9 +19,15 @@ export default function AGGrid() {
     return { resizable: true };
   }, []);
 
-  const autoSizeStrategy = {
-    type: "fitCellContents",
-  };
+  const autoSizeStrategy = useMemo<
+    | SizeColumnsToFitGridStrategy
+    | SizeColumnsToFitProvidedWidthStrategy
+    | SizeColumnsToContentStrategy
+  >(() => {
+    return {
+      type: "fitCellContents",
+    };
+  }, []);
 
   const UpTrendPnLFormatter = (props: CustomCellRendererProps) => {
     return (
