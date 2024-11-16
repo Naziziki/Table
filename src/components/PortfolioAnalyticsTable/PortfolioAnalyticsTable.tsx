@@ -14,6 +14,11 @@ import {
 import ArrowUpIcon from "../Icons/ArrowUp.icon";
 import ArrowDownIcon from "../Icons/ArrowDown.icon";
 
+import DoubleArrowUpIcon from "../Icons/DoubleArrowUp.icon";
+import DoubleArrowDownIcon from "../Icons/DoubleArrowDown.icon";
+import CaretDownIcon from "../Icons/CaretDown.icon";
+import CaretUpIcon from "../Icons/CaretUp.icon";
+
 export default function AGGrid() {
   const defaultColDef = useMemo(() => {
     return { resizable: true };
@@ -63,11 +68,75 @@ export default function AGGrid() {
     );
   };
 
+  const RatingFormatter = (props: CustomCellRendererProps) => {
+    if (props.value === "large_buy") {
+      return (
+        <div
+          style={{
+            display: "flex",
+            alignItems: "cenrter",
+            justifyContent: "start",
+          }}
+        >
+          <div className="rating_buyTrend">
+            <DoubleArrowUpIcon />
+            <div>Large buy</div>
+          </div>
+        </div>
+      );
+    } else if (props.value === "buy") {
+      return (
+        <div
+          style={{
+            display: "flex",
+            alignItems: "cenrter",
+            justifyContent: "start",
+          }}
+        >
+          <div className="rating_buyTrend">
+            <CaretUpIcon />
+            <div>Buy</div>
+          </div>
+        </div>
+      );
+    } else if (props.value === "large_sell") {
+      return (
+        <div
+          style={{
+            display: "flex",
+            alignItems: "cenrter",
+            justifyContent: "start",
+          }}
+        >
+          <div className="rating_sellTrend">
+            <DoubleArrowDownIcon />
+            <div>Large sell</div>
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <div
+          style={{
+            display: "flex",
+            alignItems: "cenrter",
+            justifyContent: "start",
+          }}
+        >
+          <div className="rating_sellTrend">
+            <CaretDownIcon />
+            <div>Sell</div>
+          </div>
+        </div>
+      );
+    }
+  };
+
   const [rowData] = useState([
     {
       company: "MSFT",
       posEntry: "09/23/24",
-      rating: 64950,
+      rating: "large_buy",
       exposure: 100.33,
       ytdPnl: 40.05,
       qtdPnl: 4.05,
@@ -82,7 +151,7 @@ export default function AGGrid() {
     {
       company: "MSFT",
       posEntry: "09/23/24",
-      rating: 64950,
+      rating: "large_sell",
       exposure: 100.33,
       ytdPnl: 73.05,
       qtdPnl: 9.05,
@@ -97,7 +166,22 @@ export default function AGGrid() {
     {
       company: "MSFT",
       posEntry: "09/23/24",
-      rating: 64950,
+      rating: "sell",
+      exposure: 100.33,
+      ytdPnl: 40.05,
+      qtdPnl: 4.05,
+      mtdPnl: 5.55,
+      mav: 10,
+      investedCost: 55,
+      roic: 12,
+      sector: "Information Technology",
+      marcetCap: 560,
+      analyst: "Mike Tyson",
+    },
+    {
+      company: "MSFT",
+      posEntry: "09/23/24",
+      rating: "buy",
       exposure: 100.33,
       ytdPnl: 40.05,
       qtdPnl: 4.05,
@@ -114,7 +198,11 @@ export default function AGGrid() {
   const [colDefs] = useState<ColDef[]>([
     { field: "company", headerName: "COMPANY" },
     { field: "posEntry", headerName: "POSITION ENTRY" },
-    { field: "rating", headerName: "RATING" },
+    {
+      field: "rating",
+      headerName: "RATING",
+      cellRenderer: RatingFormatter,
+    },
     {
       field: "exposure",
       headerName: "EXPOSURE",

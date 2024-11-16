@@ -16,6 +16,25 @@
 
 .downTrend {
   background-color: #31191b;
+}
+
+/* Rating  */
+.rating_buyTrend,
+.rating_sellTrend {
+  position: static;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  /* justify-content: start; */
+  gap: 4px;
+  /* line-height: 18px; */
+}
+
+.rating_buyTrend {
+  color: #2eae5c;
+}
+
+.rating_sellTrend {
   color: #e8525f;
 }
 

@@ -4,10 +4,101 @@
   border: solid 1px #262626;
   border-radius: 16px;
   padding: 12px;
+  margin-bottom: 8px;
 }
 
 .portfolioAnalyticsTable__header {
   margin-bottom: 8px;
   display: flex;
   justify-content: space-between;
+}
+
+/* CHARTS  */
+.charts__container_flex {
+  display: flex;
+  gap: 8px;
+}
+
+/* Lightweight Chart  */
+.lightweightChart__container {
+  padding: 12px;
+  border: solid 1px #262626;
+  border-radius: 16px;
+  flex: 1;
+}
+
+.lightweightChart__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.lightweightChart__header_title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #a3a3a3;
+}
+
+.colorLine__list {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 10;
+}
+
+.colorLine__list_item {
+  display: flex;
+  gap: 8px;
+  padding: 4px;
+  color: white;
+  background-color: #262626;
+  align-items: center;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.colorLine__itemColor {
+  width: 5px;
+  height: 14px;
+  border-radius: 6px;
+  background-color: #e65a1e;
+}
+
+/* EChart  */
+.eChart_container {
+  padding: 12px;
+  border: solid 1px #262626;
+  border-radius: 16px;
+  flex: 1;
+}
+
+.eChart__Container_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.eChart__list {
+  display: flex;
+  gap: 8px;
+}
+
+.eChart__list_component {
+  flex: 1;
+}
+
+.eChart__header {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 8px;
+  background-color: #404040;
+}
+
+.eChart__body {
+  padding: 8px;
+  background-color: #262626;
 }
